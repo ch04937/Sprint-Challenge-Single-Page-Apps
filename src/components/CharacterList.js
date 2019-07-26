@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+//STEP 6: IMPORT CARDS
+import CharacterCard from './CharacterCard'
 
 //STEP 1: IMPORT AXIOS:
 import axios from 'axios';
 
-//STEP 6: IMPORT CARDS
-import CharacterCard from './CharacterCard'
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -30,14 +30,13 @@ export default function CharacterList() {
     )
   }, []);
 
-  return <section className='character-list grid-view'>
+  return (
+  <div>
 
       {/* STEP 7: INVOKE CHARACTERCARD */
           characters.map(character => {
-            return (
-              <CharacterCard key={character.id} {...character}/>
-            )
+            return <CharacterCard key={character.id} {...character}/>;
           })}
-    </section>
+    </div>)
 
 }

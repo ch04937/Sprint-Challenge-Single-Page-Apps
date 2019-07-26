@@ -1,5 +1,4 @@
 import React from 'react'
-import { Grid, Image } from 'semantic-ui-react'
 
 const GridExampleVerticalAlignmentRow = () => (
   <Grid columns={4} centered>
