@@ -8,14 +8,14 @@ export default function LocationsList() {
 
     useEffect(() => {
       axios.get('https://rickandmortyapi.com/api/location/')
-        .then(results => {
-          console.log('results', results.data.results)
-          setLocations(results.data.results)
+        .then(res => {
+          console.log('res', res.data.results)
+          setLocations(res.data.results)
         })
         .catch(error => 
             console.log('error: ', error)
           )      
-    }, [])
+    }, []);
   
     return (
     <div>

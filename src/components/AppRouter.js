@@ -4,7 +4,6 @@ import CharacterList from './CharacterList'
 import WelcomePage from './WelcomePage';
 import LocationsList from './LocationsList';
 
-//STEP 8: IMPORT EPISODELIST
 import EpisodesList from './EpisodeList'
 
 export default function AppRouter() {
@@ -12,10 +11,8 @@ export default function AppRouter() {
     <Switch>
       <Route path='/characters' component={CharacterList} />
       <Route path='/locations' component={LocationsList} />
-      <Route component={WelcomePage} />
-      {/* <Route path="/episodes" component={} />
-        STEP 9: ADD ROUTE */}
-      <Route path ='episodes' component = {EpisodesList} />
+      <Route path ='/episodes' component ={EpisodesList} />
+      <Route path ='/' extact component={WelcomePage} />
     </Switch>
   </div>
 

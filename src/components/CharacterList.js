@@ -21,9 +21,9 @@ export default function CharacterList() {
       'https://rickandmortyapi.com/api/character/'
     )
     //STEP 4: THEN RESPONSE AND CONSOLE.LOG TO SEE THE ARRAY RESULT
-    .then(response => {
-      console.log('response', response.data.results);
-      setCharacters(characters)
+    .then(res => {
+      console.log('res', res.data.results);
+      setCharacters(res.data.results)
     })
     .catch(error => 
       console.log('error: ', error)
@@ -31,12 +31,10 @@ export default function CharacterList() {
   }, []);
 
   return (
-  <div>
-
-      {/* STEP 7: INVOKE CHARACTERCARD */
-          characters.map(character => {
-            return <CharacterCard key={character.id} {...character}/>;
-          })}
+    <div>
+      { characters.map(character => {
+        return <CharacterCard key={character.id} {...character} />;
+      })}
     </div>)
 
 }
