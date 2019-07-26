@@ -1,5 +1,16 @@
 import React from 'react'
 
-export default function CharacterCard ({ /* add props */ }) {
-  return (<span>todo: location</span>
+//STEP 5: WHAT ARE THE API'S PARAMATERS
+export default function CharacterCard ({ name, image, location, origin, species, status }) {
+  return (
+    //STEP 6: USE THE PARAMATERS
+  <div>
+    {name}
+    {status}
+    {species}
+    {image}
+    {location}
+    {origin}
+  </div>
+  )
 }
